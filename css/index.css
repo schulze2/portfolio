@@ -1,0 +1,143 @@
+.hero-section {
+  display: flex;
+  width: 100%;
+  min-height: 52.8rem;
+  padding-top: 9rem;
+}
+
+.hero-section .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8.2rem;
+}
+
+.hero-media {
+  flex: 0 1 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-avatar {
+  width: min(58rem, 100%);
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  border: 15px solid #333;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: borderPulse 4s infinite ease-in-out;
+}
+
+.hero-avatar img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes borderPulse {
+  0% {
+    border-color: #333;
+    box-shadow: 0 0 0px rgba(51, 51, 51, 0);
+  }
+  50% {
+    border-color: #555;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+  }
+  100% {
+    border-color: #333;
+    box-shadow: 0 0 0px rgba(51, 51, 51, 0);
+  }
+}
+
+.hero-content {
+  flex: 1;
+}
+
+.hero-title {
+  font-size: 7rem;
+  letter-spacing: -2.1px;
+  font-weight: bold;
+  padding-bottom: 4.3rem;
+}
+
+.hero-description {
+  max-width: 80.3rem;
+  font-size: 1.6rem;
+  letter-spacing: -0.48px;
+  text-align: justify;
+}
+
+.hero-actions {
+  padding-top: 2.3rem;
+  display: flex;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 1200px) {
+  .hero-section .container {
+    gap: 4.8rem;
+  }
+
+  .hero-avatar {
+    width: min(48rem, 100%);
+  }
+
+  .hero-title {
+    font-size: 5.2rem;
+    padding-bottom: 2.4rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero-section .container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3.2rem;
+  }
+
+  .hero-media {
+    width: 100%;
+  }
+
+  .hero-avatar {
+    width: min(44rem, 100%);
+  }
+
+  .hero-title {
+    font-size: 4.2rem;
+    text-align: center;
+  }
+
+  .hero-actions {
+    padding-bottom: 2.3rem;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-section {
+    padding: 2.4rem 0;
+  }
+
+  .hero-title {
+    font-size: 3.2rem;
+  }
+
+  .hero-description {
+    font-size: 1.4rem;
+    text-align: left;
+  }
+
+  .hero-actions {
+    width: 100%;
+    gap: 1.2rem;
+  }
+
+  .hero-actions .primary-button {
+    width: 100%;
+    text-align: center;
+  }
+}
