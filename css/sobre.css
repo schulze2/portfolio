@@ -78,6 +78,32 @@ main .container {
   margin-bottom: 0.8rem;
 }
 
+.habilities .skills-icons {
+  list-style: none;
+  padding-left: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.2rem;
+}
+
+.habilities .skills-icons li {
+  margin-bottom: 0;
+  min-height: 6.2rem;
+  border: 1px solid var(--color-border);
+  border-radius: 1rem;
+  background-color: var(--color-surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9rem;
+}
+
+.habilities .skills-icons img {
+  width: 3.6rem;
+  height: 3.6rem;
+  object-fit: contain;
+}
+
 .languages h2 {
   font-size: 2.4rem;
   font-weight: bold;
@@ -140,8 +166,11 @@ main .container {
 
   .professional .work ul,
   .education ul,
-  .habilities ul,
   .languages ul {
     padding-left: 2rem;
+  }
+
+  .habilities .skills-icons {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }

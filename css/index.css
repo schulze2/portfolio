@@ -22,7 +22,7 @@
   width: min(58rem, 100%);
   aspect-ratio: 1 / 1;
   border-radius: 50%;
-  border: 15px solid #333;
+  border: 15px solid var(--color-border);
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -38,16 +38,16 @@
 
 @keyframes borderPulse {
   0% {
-    border-color: #333;
-    box-shadow: 0 0 0px rgba(51, 51, 51, 0);
+    border-color: var(--color-border);
+    box-shadow: 0 0 0px rgba(106, 105, 99, 0);
   }
   50% {
-    border-color: #555;
-    box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+    border-color: var(--color-text-secondary);
+    box-shadow: 0 0 30px rgba(240, 239, 232, 0.16);
   }
   100% {
-    border-color: #333;
-    box-shadow: 0 0 0px rgba(51, 51, 51, 0);
+    border-color: var(--color-border);
+    box-shadow: 0 0 0px rgba(106, 105, 99, 0);
   }
 }
 
@@ -56,7 +56,7 @@
 }
 
 .hero-title {
-  font-size: 7rem;
+  font-size: 5.2rem;
   letter-spacing: -2.1px;
   font-weight: bold;
   padding-bottom: 4.3rem;
@@ -86,7 +86,7 @@
   }
 
   .hero-title {
-    font-size: 5.2rem;
+    font-size: 4.4rem;
     padding-bottom: 2.4rem;
   }
 }

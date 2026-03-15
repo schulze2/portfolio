@@ -1,43 +1,52 @@
 const portfolioProjects = [
   {
-    title: 'Projeto 1',
+    title: 'projeto Site Pessoal',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Layout responsivo para landing page de produto ou servico. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Layout responsivo para landing page de produto ou servico.',
+      'Projeto de site pessoal desenvolvido para o primeiro trabalho da matéria Desenvolvimento para aplicações web, utilizando HTML, CSS e JavaScript.',
     image: './images/imagem_01.png',
     alt: 'Previa do projeto de landing page',
     link: '#',
     buttonLabel: 'Ver projeto',
   },
   {
-    title: 'Projeto 2',
+    title: 'NLW eSports',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Layout responsivo para landing page de produto ou servico. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Layout responsivo para landing page de produto ou servico.',
-    image: './images/imagem_01.png',
+      'Projeto constuído do evento Next Level Week da Rocketseat.',
+    image: './images/nlw.png',
     alt: 'Previa do projeto institucional',
-    link: '#',
+    link: 'https://github.com/schulze2/NLW-esports-explorer',
     buttonLabel: 'Ver projeto',
   },
   {
-    title: 'Projeto 3',
+    title: 'Busca Rápida e Fácil de Atletas Brasileiros!',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Layout responsivo para landing page de produto ou servico. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Layout responsivo para landing page de produto ou servico.',
-    image: './images/imagem_01.png',
-    alt: 'Previa do projeto de portfolio pessoal',
-    link: '#',
+      'Projeto constuído do evento Imersão DEV com Google Gemini.',
+    image: './images/Atletas.png',
+    alt: 'Previa do projeto previa a imersão DEV com google gemini',
+    link: 'https://github.com/schulze2/imersao-alura-gemini',
     buttonLabel: 'Ver projeto',
   },
   {
-    title: 'Projeto 4',
+    title: 'Projeto Agenda de Contatos',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Layout responsivo para landing page de produto ou servico. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Layout responsivo para landing page de produto ou servico.',
-    image: './images/imagem_01.png',
-    alt: 'Previa do projeto de painel administrativo',
-    link: '#',
+      'Projeto constuído no curso do Luiz Otávio Miranda, utilizando Django para criar uma aplicação web de agenda de contatos.',
+    image: './images/agenda.png',
+    alt: 'Previa do projeto Agenda',
+    link: 'https://github.com/schulze2/Agenda',
+    buttonLabel: 'Ver projeto',
+  },
+  {
+    title: 'Projeto Blog com Django',
+    description:
+      'Projeto de blog desenvolvido durante o curso de Python do Luiz Otávio Miranda, usando Django.',
+    image: './images/blog.png',
+    alt: 'Previa do projeto Blog',
+    link: 'https://github.com/schulze2/projeto-blog-django',
     buttonLabel: 'Ver projeto',
   },
 ];
 
-const portfolioGrid = document.querySelector('#portfolio-grid');
+const portfolioGrid = document.querySelector('#portfolio-area');
 
 if (portfolioGrid) {
   const cardsFragment = document.createDocumentFragment();
