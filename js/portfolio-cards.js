@@ -3,9 +3,9 @@ const portfolioProjects = [
     title: 'projeto Site Pessoal',
     description:
       'Projeto de site pessoal desenvolvido para o primeiro trabalho da matéria Desenvolvimento para aplicações web, utilizando HTML, CSS e JavaScript.',
-    image: './images/imagem_01.png',
-    alt: 'Previa do projeto de landing page',
-    link: '#',
+    image: './images/web.png',
+    alt: 'Previa do projeto de site pessoal',
+    link: 'https://github.com/schulze2/portfolio',
     buttonLabel: 'Ver projeto',
   },
   {
@@ -71,6 +71,7 @@ if (portfolioGrid) {
     const link = document.createElement('a');
     link.className = 'primary-button';
     link.href = project.link;
+    link.setAttribute('target', '_blank');
     link.textContent = project.buttonLabel;
 
     content.appendChild(title);

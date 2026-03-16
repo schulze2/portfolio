@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Germano Schulze Jr. | Novidades</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="css/container.css" />
+    <link rel="stylesheet" href="css/nav.css" />
+    <link rel="stylesheet" href="css/shared.css" />
+    <link rel="stylesheet" href="css/news.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <a href="index.html" class="logo">
+          <img src="./images/Logo.svg" alt="Logo" />
+        </a>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+          aria-label="Abrir menu"
+        >
+          ☰
+        </button>
+
+        <nav class="nav-menu" id="nav-menu">
+          <ul class="nav-list">
+            <li class="nav-mobile-logo">
+              <a class="nav-link" href="index.html"
+                ><img src="./images/Logo.svg" alt="Logo"
+              /></a>
+            </li>
+            <li><a class="nav-link" href="about.html">sobre</a></li>
+            <li><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+            <li>
+              <a class="nav-link" href="news.html" aria-current="page"
+                >Novidades</a
+              >
+            </li>
+            <li><a class="nav-link" href="contact.html">Contato</a></li>
+          </ul>
+        </nav>
+
+        <button
+          class="menu-overlay"
+          type="button"
+          aria-label="Fechar menu"
+        ></button>
+      </div>
+    </header>
+
+    <main>
+      <div class="page-heading">
+        <h1>Novidades</h1>
+      </div>
+
+      <div class="container">
+        <article class="news" aria-label="News sobre impressão 3D">
+          <header class="news-header">
+            <h2>Meu novo hobbie: aprendendo impressão 3D</h2>
+            <p class="news-subtitle">
+              Uma fase nova de aprendizado, experimentação e ideias para
+              explorar criatividade e modelagem 3D.
+            </p>
+          </header>
+
+          <div class="news-content">
+            <section
+              class="news-highlight"
+              aria-label="Inicio do aprendizado em impressão 3D"
+            >
+              <div class="news-highlight-text">
+                <p>
+                  Recentemente comecei a aprender a mexer com impressora 3D.
+                  Sempre tive curiosidade sobre como transformar uma ideia
+                  digital em algo fisico, e agora estou vivendo esse processo na
+                  pratica.
+                </p>
+                <p>
+                  Essa fase inicial esta sendo importante para entender cada
+                  detalhe do processo, desde a preparacao do arquivo ate o
+                  acabamento final das pecas.
+                </p>
+              </div>
+
+              <figure class="news-image">
+                <img
+                  src="./images/config_fatiador.png"
+                  alt="Inicio dos estudos e testes com impressão 3D"
+                />
+                <figcaption>
+                  Primeiros testes: entendendo configuração, materiais e
+                  qualidade de impressão.
+                </figcaption>
+              </figure>
+            </section>
+
+            <section
+              class="news-highlight news-highlight-reverse"
+              aria-label="Planejamento da proxima etapa"
+            >
+              <div class="news-highlight-text">
+                <p>
+                  Neste momento, meu foco e ganhar base tecnica: calibracao,
+                  configuração e testes para melhorar cada impressão. Estou
+                  construindo essa etapa com paciencia para evoluir com
+                  consistencia.
+                </p>
+                <p>
+                  Com essa experiencia, quero avancar para projetos mais
+                  criativos, combinando estudo continuo, tentativa e erro e
+                  aplicações praticas no dia a dia.
+                </p>
+              </div>
+
+              <figure class="news-image">
+                <img
+                  src="./images/tela makeworld.png"
+                  alt="Tela do site makeWorld, onde se encontra todos os modelos 3D que estou imprimindo"
+                />
+                <figcaption>
+                  Planejamento da proxima etapa: evoluir para projetos 3D
+                  autorais.
+                </figcaption>
+              </figure>
+            </section>
+
+            <p>
+              Meu proximo objetivo e iniciar a modelagem 3D com mais seguranca.
+              Assim, vou conseguir criar minhas proprias pecas e, ao mesmo
+              tempo, transformar ideias em resultados praticos.
+            </p>
+
+            <p>
+              A ideia e continuar evoluindo para desenvolver projetos cada vez
+              mais completos, combinando design e construcao pratica.
+            </p>
+          </div>
+        </article>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-main">
+          <div class="footer-social">
+            <a href="">Facebook</a>
+            <a href="">Instagram</a>
+            <a href="">LinkedIn</a>
+          </div>
+          <div class="footer-copyright">
+            <p>Copyright © 2026 Germano Schulze. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/menu-mobile.js"></script>
+  </body>
+</html>
