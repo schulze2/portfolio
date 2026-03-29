@@ -1,3 +1,17 @@
+<?php
+$statusMessages = [
+    'success' => 'Mensagem enviada com sucesso. Obrigado pelo contato!',
+    'send_error' => 'Nao foi possivel enviar sua mensagem agora. Tente novamente em instantes.',
+    'config_error' => 'Configuracao de e-mail incompleta no servidor.',
+    'invalid_input' => 'Preencha todos os campos obrigatorios.',
+    'invalid_email' => 'Informe um e-mail valido.',
+    'invalid_request' => 'Metodo de envio invalido.'
+];
+
+// Obtém o status da URL e define a mensagem de alerta correspondente
+$status = strtolower(trim((string)($_GET['status'] ?? '')));
+$alertMessage = $statusMessages[$status] ?? '';
+?>
 <!doctype html>
 <html lang="pt-br">
   <head>
@@ -43,7 +57,7 @@
             <li><a class="nav-link" href="about.html">sobre</a></li>
             <li><a class="nav-link" href="portfolio.html">Portfolio</a></li>
             <li><a class="nav-link" href="news.html">Novidades</a></li>
-            <li><a class="nav-link" href="contact.html" aria-current="page">Contato</a></li>
+            <li><a class="nav-link" href="contact.php" aria-current="page">Contato</a></li>
           </ul>
         </nav>
 
@@ -62,48 +76,54 @@
 
       <div class="container">
         <section class="contact-section" aria-label="Formulario de contato">
-          <form class="contact-form" action="#" method="post">
+          <form class="contact-form" id="contact-form" action="send.php" method="post" novalidate>
             <h2>Vamos conversar</h2>
             <p>
               Preencha os campos abaixo e eu entro em contato com voce o mais
               rapido possivel.
             </p>
 
-            <label for="nome">Nome</label>
-            <input
-              id="nome"
-              name="nome"
-              type="text"
-              placeholder="Seu nome"
-              required
-            />
+            <div class="contact-form-fields">
+              <div class="contact-form-left">
+                <label for="name">Nome</label>
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  placeholder="Seu nome"
+                  required
+                />
 
-            <label for="email">E-mail</label>
-            <input
-              id="email"
-              name="email"
-              type="email"
-              placeholder="seu email@exemplo.com"
-              required
-            />
+                <label for="email">E-mail</label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  placeholder="seu email@exemplo.com"
+                  required
+                />
 
-            <label for="assunto">Assunto</label>
-            <input
-              id="assunto"
-              name="assunto"
-              type="text"
-              placeholder="Digite o assunto"
-              required
-            />
+                <label for="subject">Assunto</label>
+                <input
+                  id="subject"
+                  name="subject"
+                  type="text"
+                  placeholder="Digite o assunto"
+                  required
+                />
+              </div>
 
-            <label for="mensagem">Mensagem</label>
-            <textarea
-              id="mensagem"
-              name="mensagem"
-              rows="5"
-              placeholder="Escreva sua mensagem"
-              required
-            ></textarea>
+              <div class="contact-form-right">
+                <label for="message">Mensagem</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  placeholder="Escreva sua mensagem"
+                  required
+                ></textarea>
+              </div>
+            </div>
 
             <button type="submit" class="primary-button">
               Enviar mensagem
@@ -117,9 +137,9 @@
       <div class="container">
         <div class="footer-main">
           <div class="footer-social">
-            <a href="">Facebook</a>
-            <a href="">Instagram</a>
-            <a href="">LinkedIn</a>
+            <a href="https://github.com/schulze2" target="_blank">Github</a>
+            <a href="https://www.instagram.com/germano_schulze/" target="_blank">Instagram</a>
+            <a href="https://www.linkedin.com/in/germanosjunior/" target="_blank">LinkedIn</a>
           </div>
           <div class="footer-copyright">
             <p>Copyright © 2026 Germano Schulze. All rights reserved.</p>
@@ -127,6 +147,14 @@
         </div>
       </div>
     </footer>
+    
+    <?php if ($alertMessage !== ''): ?>
+      <script>
+        alert(<?php echo json_encode($alertMessage, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE); ?>);
+      </script>
+    <?php endif; ?>
+
+    <script src="js/contact-validation.js"></script>
     <script src="js/menu-mobile.js"></script>
   </body>
 </html>

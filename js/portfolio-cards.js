@@ -1,3 +1,4 @@
+// Dados dos projetos para exibição nas cards do portfólio
 const portfolioProjects = [
   {
     title: 'projeto Site Pessoal',
@@ -46,6 +47,7 @@ const portfolioProjects = [
   },
 ];
 
+// Gerar as cards do portfólio dinamicamente com base nos dados dos projetos
 const portfolioGrid = document.querySelector('#portfolio-area');
 
 if (portfolioGrid) {

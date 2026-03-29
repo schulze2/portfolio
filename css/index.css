@@ -2,7 +2,9 @@
   display: flex;
   width: 100%;
   min-height: 52.8rem;
-  padding-top: 9rem;
+  padding-top: 6rem;
+  padding-bottom: 3rem;
+  flex: 1;
 }
 
 .hero-section .container {

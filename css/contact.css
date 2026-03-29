@@ -8,7 +8,7 @@ main .container {
 
 .contact-section {
   width: 100%;
-  max-width: 72rem;
+  max-width: 92rem;
   margin: 0 auto;
   padding-bottom: 4rem;
 }
@@ -20,6 +20,28 @@ main .container {
   padding: 2.4rem;
   display: flex;
   flex-direction: column;
+  gap: 1.6rem;
+}
+
+.contact-form-fields {
+  display: flex;
+  align-items: stretch;
+  gap: 1.6rem;
+}
+
+.contact-form-left,
+.contact-form-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form-left {
+  flex: 1;
+  gap: 1.2rem;
+}
+
+.contact-form-right {
+  flex: 1;
   gap: 1.2rem;
 }
 
@@ -53,6 +75,7 @@ main .container {
 .contact-form textarea {
   resize: vertical;
   min-height: 12rem;
+  height: 100%;
 }
 
 .contact-form input:focus,
@@ -78,6 +101,10 @@ main .container {
   main .container {
     flex-direction: column;
     gap: 3.2rem;
+  }
+
+  .contact-form-fields {
+    flex-direction: column;
   }
 
   .contact-section {
